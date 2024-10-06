@@ -1,0 +1,36 @@
+name: echtzeit_uebersetzer
+description: Eine Echtzeit Übersetzer App
+
+publish_to: 'none' # Veröffentliche diese App nicht auf pub.dev
+
+version: 1.0.2+3 # Aktualisierte Version
+
+environment:
+  sdk: '>=2.18.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  speech_to_text: ^7.0.0
+  permission_handler: ^11.3.0
+  flutter_tts: ^3.6.3
+  http: ^0.13.5
+  flutter_dotenv: ^5.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env  # Hier die .env Datei hinzufügen
+    - assets/images/logo.png
+
+  fonts:
+    - family: CenturyGothic
+      fonts:
+        - asset: assets/fonts/century_gothic.ttf
+        - asset: assets/fonts/century_gothic_bold.ttf
+          weight: 700

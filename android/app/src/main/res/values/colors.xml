@@ -1,0 +1,17 @@
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#008B8B</color>
+    <color name="colorSecondaryVariant">#6E6E6E</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorError">#B00020</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#000000</color>
+    <!-- Fehlende Farben hinzufügen -->
+    <color name="teal_700">#008B8B</color>
+    <color name="orange_accent">#FF5722</color>
+</resources>
