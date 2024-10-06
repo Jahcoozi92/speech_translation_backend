@@ -84,4 +84,24 @@ app.post('/translate', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server läuft auf Port ${PORT}`);
+  
+  const express = require('express');
+const cors = require('cors');
+const app = express();
+const port = process.env.PORT || 10000;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Backend für Sprachübersetzung läuft erfolgreich!');
+});
+
+// Starte den Server
+app.listen(port, () => {
+  console.log(`Server läuft auf Port ${port}`);
+});
+
 });
