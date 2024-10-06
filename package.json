@@ -1,0 +1,14 @@
+{
+  "name": "speech-translation-backend",
+  "version": "1.0.0",
+  "description": "Backend for Speech Translation App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "^10.0.0",
+    "openai": "^3.0.0"
+  }
+}
