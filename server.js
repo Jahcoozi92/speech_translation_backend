@@ -1,5 +1,3 @@
-// server.js
-
 require('dotenv').config();
 const express = require('express');
 const multer = require('multer');
@@ -13,6 +11,11 @@ app.use(express.json());
 
 // Einrichtung von Multer für Datei-Uploads
 const upload = multer({ dest: 'uploads/' });
+
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Backend für Sprachübersetzung läuft erfolgreich!');
+});
 
 // Endpoint für die Spracherkennung
 app.post('/transcribe', upload.single('audio'), async (req, res) => {
@@ -81,27 +84,7 @@ app.post('/translate', async (req, res) => {
 });
 
 // Server starten
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`Server läuft auf Port ${PORT}`);
-  
-  const express = require('express');
-const cors = require('cors');
-const app = express();
-const port = process.env.PORT || 10000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Root Route
-app.get('/', (req, res) => {
-  res.send('Backend für Sprachübersetzung läuft erfolgreich!');
-});
-
-// Starte den Server
-app.listen(port, () => {
-  console.log(`Server läuft auf Port ${port}`);
-});
-
 });
